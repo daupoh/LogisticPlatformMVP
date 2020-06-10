@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace LogisticPlatformMVP
 {
-    public partial class Form1 : Form
+    public partial class FormOrderOperate : Form
     {
-        public Form1()
+        public FormOrderOperate()
         {
             InitializeComponent();
+            clbxOrders.SetItemChecked(clbxOrders.Items.Count - 1, true);
         }
     }
 }
