@@ -16,7 +16,7 @@ namespace LogisticPlatformMVP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormOrderOperate());
+            Application.Run(new FormRoute());
         }
     }
 }

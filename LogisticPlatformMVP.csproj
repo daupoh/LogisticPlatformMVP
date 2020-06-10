@@ -58,6 +58,13 @@
     <Compile Include="FormOrderOperate.Designer.cs">
       <DependentUpon>FormOrderOperate.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRoute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRoute.Designer.cs">
+      <DependentUpon>FormRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAddressEdit.resx">
@@ -65,6 +72,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormOrderOperate.resx">
       <DependentUpon>FormOrderOperate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRoute.resx">
+      <DependentUpon>FormRoute.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
