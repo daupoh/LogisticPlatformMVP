@@ -67,6 +67,14 @@
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Prototype\Adapters\OrderManager\IOrderManagerAdapter.cs" />
+    <Compile Include="Prototype\DataModel\Map\GraphArc\IGraphArc.cs" />
+    <Compile Include="Prototype\DataModel\Map\GraphPath\IGraphPath.cs" />
+    <Compile Include="Prototype\DataModel\Transfer\Courier\ICourier.cs" />
+    <Compile Include="Prototype\DataModel\Transfer\IEntity.cs" />
+    <Compile Include="Prototype\DataModel\Transfer\OrderPool\IOrderPool.cs" />
+    <Compile Include="Prototype\DataModel\Transfer\Order\IOrder.cs" />
+    <Compile Include="Prototype\Subsystems\Operating\IOperating.cs" />
     <EmbeddedResource Include="FormAddressEdit.resx">
       <DependentUpon>FormAddressEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,6 +105,23 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Prototype\Adapters\WebMap\" />
+    <Folder Include="Prototype\Algorithms\AntColony\AntRun\" />
+    <Folder Include="Prototype\Algorithms\AntColony\Ant\" />
+    <Folder Include="Prototype\Algorithms\Genetic\Chromosome\" />
+    <Folder Include="Prototype\Algorithms\Genetic\Evolution\" />
+    <Folder Include="Prototype\DataModel\Hierarchy\Criterion\" />
+    <Folder Include="Prototype\DataModel\Hierarchy\GoalModel\" />
+    <Folder Include="Prototype\DataModel\Hierarchy\PairComprassionMatrix\" />
+    <Folder Include="Prototype\DataModel\Hierarchy\Scales\" />
+    <Folder Include="Prototype\DataModel\Hierarchy\Standart\" />
+    <Folder Include="Prototype\DataModel\Map\Route\" />
+    <Folder Include="Prototype\Subsystems\Assignement\" />
+    <Folder Include="Prototype\Subsystems\HierarchyGrades\" />
+    <Folder Include="Prototype\Subsystems\HierarchySettings\" />
+    <Folder Include="Prototype\Subsystems\Searching\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

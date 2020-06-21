@@ -25,7 +25,7 @@ namespace LogisticPlatformMVP
             string[] row3 = new string[] { "ул. Победы, Белгородская обл.", "1", "11", "20" };
             string[] row4 = new string[] { "ул. Костюкова, 46, Белгородская обл.", "10", "21", "25" };
             string[] row5 = new string[] { "ул. Королева, 2а, 2, Белгородская обл.", "8", "29", "30" };
-            string[] row6 = new string[] { "Олимпийская улица, 8, Белгородская область", "26", "55", "12" };
+            string[] row6 = new string[] { "Олимпийская улица, 8, Белгородская область", "26", "55", "45" };
             string[] row7 = new string[] { "Богдана Хмельницкого просп., 137T, Белгородская обл.", "10", "65", "0" };
             object[] rows = new object[] { row0, row1, row2, row3, row4, row5, row6, row7 };
             foreach (string[] rowArray in rows)
