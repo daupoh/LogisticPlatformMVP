@@ -30,10 +30,10 @@ namespace LogisticPlatformMVP
             object[] rows = new object[] { row0, row1, row2, row3, row4, row5, row6, row7 };
             foreach (string[] rowArray in rows)
             {
-                dgvRoute.Rows.Add(rowArray);
+                dgvHierarchyRoute.Rows.Add(rowArray);
             }
             //dgvRoute.EnableHeadersVisualStyles = false;            
-            dgvRoute.ClearSelection();
+            dgvHierarchyRoute.ClearSelection();
             row0 = new string[] { "Богдана Хмельницкого просп., 137T, Белгородская обл.", "0", "0", "0" };
             row1 = new string[] { "ул. Попова, 12, Белгород", "10", "10", "45" };
             row2 = new string[] { "Театральный пр-д, 1, Белгородская обл.", "19", "29", "20" };
@@ -47,28 +47,30 @@ namespace LogisticPlatformMVP
             {
                 dgvQuickRoute.Rows.Add(rowArray);
             }
+           
+        }
+        private void SelectLates()
+        {
             for (int i = 0; i < dgvQuickRoute.Rows.Count; i++)
             {
-                if (Convert.ToInt32(dgvQuickRoute.Rows[i].Cells[3].Value)< Convert.ToInt32(dgvQuickRoute.Rows[i].Cells[2].Value))
+                if (Convert.ToInt32(dgvQuickRoute.Rows[i].Cells[3].Value) < Convert.ToInt32(dgvQuickRoute.Rows[i].Cells[2].Value))
                 {
                     dgvQuickRoute[3, i].Style.BackColor = Color.Red;
-
                 }
                 else
                 {
                     dgvQuickRoute[3, i].Style.BackColor = Color.Green;
                 }
             }
-            for (int i = 0; i < dgvRoute.Rows.Count; i++)
+            for (int i = 0; i < dgvHierarchyRoute.Rows.Count; i++)
             {
-                if (Convert.ToInt32(dgvRoute.Rows[i].Cells[3].Value) < Convert.ToInt32(dgvRoute.Rows[i].Cells[2].Value))
+                if (Convert.ToInt32(dgvHierarchyRoute.Rows[i].Cells[3].Value) < Convert.ToInt32(dgvHierarchyRoute.Rows[i].Cells[2].Value))
                 {
-                    dgvRoute[3, i].Style.BackColor = Color.Red;
-
+                    dgvHierarchyRoute[3, i].Style.BackColor = Color.Red;
                 }
                 else
                 {
-                    dgvRoute[3, i].Style.BackColor = Color.Green;
+                    dgvHierarchyRoute[3, i].Style.BackColor = Color.Green;
                 }
             }
         }
@@ -76,10 +78,10 @@ namespace LogisticPlatformMVP
 
         private void DgvRoute_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgvRoute.SelectedRows.Count>0 && dgvRoute.SelectedRows[0].Index!=m_iSelectionNumber)
+            if (dgvHierarchyRoute.SelectedRows.Count>0 && dgvHierarchyRoute.SelectedRows[0].Index!=m_iSelectionNumber)
             {
-                dgvRoute.ClearSelection();
-                dgvRoute.Rows[m_iSelectionNumber].Selected = true;
+                dgvHierarchyRoute.ClearSelection();
+                dgvHierarchyRoute.Rows[m_iSelectionNumber].Selected = true;
             }
 
         }
@@ -87,14 +89,14 @@ namespace LogisticPlatformMVP
         private void BtnNext_Click(object sender, EventArgs e)
         {
             m_iSelectionNumber++;
-            if (m_iSelectionNumber == dgvRoute.Rows.Count)
+            if (m_iSelectionNumber == dgvHierarchyRoute.Rows.Count)
             {
-                btnNext.Enabled = false;
+               
                 MessageBox.Show("Маршрут завершен!");
             }
             else
             {
-                dgvRoute.Rows[m_iSelectionNumber].Selected = true;
+                dgvHierarchyRoute.Rows[m_iSelectionNumber].Selected = true;
             }
         }
     }

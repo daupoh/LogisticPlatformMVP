@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             this.gbxRoute = new System.Windows.Forms.GroupBox();
-            this.dgvRoute = new System.Windows.Forms.DataGridView();
+            this.dgvHierarchyRoute = new System.Windows.Forms.DataGridView();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IntervalTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ExpectedTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnNext = new System.Windows.Forms.Button();
             this.gbxQuickRoutePanel = new System.Windows.Forms.GroupBox();
             this.dgvQuickRoute = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,14 +41,14 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbxRoute.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRoute)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHierarchyRoute)).BeginInit();
             this.gbxQuickRoutePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuickRoute)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxRoute
             // 
-            this.gbxRoute.Controls.Add(this.dgvRoute);
+            this.gbxRoute.Controls.Add(this.dgvHierarchyRoute);
             this.gbxRoute.Location = new System.Drawing.Point(12, 12);
             this.gbxRoute.Name = "gbxRoute";
             this.gbxRoute.Size = new System.Drawing.Size(625, 259);
@@ -57,32 +56,32 @@
             this.gbxRoute.TabStop = false;
             this.gbxRoute.Text = "Маршрут с выбором эффективного пути";
             // 
-            // dgvRoute
+            // dgvHierarchyRoute
             // 
-            this.dgvRoute.AllowUserToAddRows = false;
-            this.dgvRoute.AllowUserToDeleteRows = false;
-            this.dgvRoute.AllowUserToResizeColumns = false;
-            this.dgvRoute.AllowUserToResizeRows = false;
-            this.dgvRoute.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dgvRoute.BackgroundColor = System.Drawing.SystemColors.Menu;
-            this.dgvRoute.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvRoute.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgvRoute.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRoute.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvHierarchyRoute.AllowUserToAddRows = false;
+            this.dgvHierarchyRoute.AllowUserToDeleteRows = false;
+            this.dgvHierarchyRoute.AllowUserToResizeColumns = false;
+            this.dgvHierarchyRoute.AllowUserToResizeRows = false;
+            this.dgvHierarchyRoute.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvHierarchyRoute.BackgroundColor = System.Drawing.SystemColors.Menu;
+            this.dgvHierarchyRoute.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvHierarchyRoute.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvHierarchyRoute.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHierarchyRoute.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Address,
             this.IntervalTime,
             this.TotalTime,
             this.ExpectedTime});
-            this.dgvRoute.Location = new System.Drawing.Point(6, 19);
-            this.dgvRoute.MultiSelect = false;
-            this.dgvRoute.Name = "dgvRoute";
-            this.dgvRoute.ReadOnly = true;
-            this.dgvRoute.RowHeadersVisible = false;
-            this.dgvRoute.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRoute.Size = new System.Drawing.Size(601, 226);
-            this.dgvRoute.TabIndex = 0;
-            this.dgvRoute.TabStop = false;
-            this.dgvRoute.SelectionChanged += new System.EventHandler(this.DgvRoute_SelectionChanged);
+            this.dgvHierarchyRoute.Location = new System.Drawing.Point(6, 19);
+            this.dgvHierarchyRoute.MultiSelect = false;
+            this.dgvHierarchyRoute.Name = "dgvHierarchyRoute";
+            this.dgvHierarchyRoute.ReadOnly = true;
+            this.dgvHierarchyRoute.RowHeadersVisible = false;
+            this.dgvHierarchyRoute.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvHierarchyRoute.Size = new System.Drawing.Size(601, 226);
+            this.dgvHierarchyRoute.TabIndex = 0;
+            this.dgvHierarchyRoute.TabStop = false;
+            this.dgvHierarchyRoute.SelectionChanged += new System.EventHandler(this.DgvRoute_SelectionChanged);
             // 
             // Address
             // 
@@ -125,20 +124,8 @@
             this.ExpectedTime.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.ExpectedTime.Width = 150;
             // 
-            // btnNext
-            // 
-            this.btnNext.Location = new System.Drawing.Point(497, 193);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(128, 32);
-            this.btnNext.TabIndex = 2;
-            this.btnNext.Text = "Прибыл!";
-            this.btnNext.UseVisualStyleBackColor = true;
-            this.btnNext.Visible = false;
-            this.btnNext.Click += new System.EventHandler(this.BtnNext_Click);
-            // 
             // gbxQuickRoutePanel
             // 
-            this.gbxQuickRoutePanel.Controls.Add(this.btnNext);
             this.gbxQuickRoutePanel.Controls.Add(this.dgvQuickRoute);
             this.gbxQuickRoutePanel.Location = new System.Drawing.Point(12, 277);
             this.gbxQuickRoutePanel.Name = "gbxQuickRoutePanel";
@@ -224,7 +211,7 @@
             this.Name = "FormRoute";
             this.Text = "Маршрут";
             this.gbxRoute.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRoute)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHierarchyRoute)).EndInit();
             this.gbxQuickRoutePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuickRoute)).EndInit();
             this.ResumeLayout(false);
@@ -234,8 +221,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gbxRoute;
-        private System.Windows.Forms.DataGridView dgvRoute;
-        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.DataGridView dgvHierarchyRoute;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
         private System.Windows.Forms.DataGridViewTextBoxColumn IntervalTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalTime;
