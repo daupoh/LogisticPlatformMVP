@@ -49,6 +49,10 @@ namespace LogisticPlatformMVP
             }
            
         }
+        private void RandomGraph()
+        {
+
+        }
         private void SelectLates()
         {
             for (int i = 0; i < dgvQuickRoute.Rows.Count; i++)

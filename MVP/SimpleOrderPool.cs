@@ -9,7 +9,7 @@ namespace wf_AI_lab1
     class SimpleOrderPool
     {
         readonly double[][] m_aDistancesGraph, m_aPheromoneConcentration;
-        CLaw m_rLaw;
+        CGenLaw m_rLaw;
         public int VertexCount { get; private set; }
         public SimpleOrderPool()
         {

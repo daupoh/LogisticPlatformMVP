@@ -8,12 +8,12 @@ namespace wf_AI_lab1
 {
     class CRunningAnt
     {
-        CLaw m_rLaw;
+        CGenLaw m_rLaw;
         SimpleOrderPool m_rOrderPool;
         int[] m_aTabuList, m_aPath;
         public int StartPos { get; private set; }
         
-        public CRunningAnt(CLaw rLaw, int iStartPos,SimpleOrderPool rOrderPool)
+        public CRunningAnt(CGenLaw rLaw, int iStartPos,SimpleOrderPool rOrderPool)
         {
             if (rLaw!=null && rOrderPool!=null && rLaw.IsPosInNet(iStartPos))
             {
