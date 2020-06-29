@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LogisticPlatformMVP.Prototype.Adapters.OrderManager
+namespace LogisticPlatformMVP.Prototype.DataModel.Hierarchy.Scales
 {
-    interface IOrderManagerAdapter
+    static class SCModelScales
     {
-
     }
 }

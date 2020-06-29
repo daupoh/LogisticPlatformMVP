@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="LogisticPlatformMVP.Prototype.CPrototypeLogisticPlatform" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="3.75" />
+    <AssociationLine Name="m_rOperating" Type="LogisticPlatformMVP.Prototype.Subsystems.Operating.IOperatingSubsystem" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="5.807" />
+        <Point X="7.917" Y="5.807" Type="JumpStart" />
+        <Point X="8.083" Y="5.807" Type="JumpEnd" />
+        <Point X="8.76" Y="5.807" Type="JumpStart" />
+        <Point X="8.927" Y="5.807" Type="JumpEnd" />
+        <Point X="10.25" Y="5.807" />
+        <Point X="10.25" Y="4.75" />
+        <Point X="11" Y="4.75" />
+        <Point X="11" Y="3.18" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="m_rGradeModelSettings" Type="LogisticPlatformMVP.Prototype.Subsystems.HierarchySettings.IGradeSettingSubsystem" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.125" Y="5.5" />
+        <Point X="2.125" Y="5.446" />
+        <Point X="2.188" Y="5.446" />
+        <Point X="2.188" Y="3.786" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ggAQAQAEAAAAgEAAAAAABAAIAACiAAAAAABIABAEAAA=</HashCode>
+      <FileName>Prototype\CPrototypeLogisticPlatform.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_rOperating" />
+      <Field Name="m_rGradeModelSettings" />
+    </ShowAsAssociation>
+    <Lollipop Position="2.58" />
+  </Class>
+  <Class Name="LogisticPlatformMVP.Prototype.Subsystems.Optimizator.ACOptimizator" Collapsed="true">
+    <Position X="11.25" Y="8.75" Width="1.5" />
+    <AssociationLine Name="m_rGradeModel" Type="LogisticPlatformMVP.Prototype.Subsystems.HierarchyGrades.IGradeSubsystem">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.073" Y="0.949" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Prototype\Subsystems\Optimizator\ACOptimizator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_rGradeModel" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LogisticPlatformMVP.Prototype.Subsystems.Operating.ACOperating" Collapsed="true">
+    <Position X="8.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQQAEAAAAAUAAAAAAAAAAAAAAAAAAAABAAAAAAAI=</HashCode>
+      <FileName>Prototype\Subsystems\Operating\ACOperating.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_rAssignement" />
+      <Field Name="m_rOrderManager" />
+      <Field Name="m_rWebMap" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LogisticPlatformMVP.Prototype.Subsystems.HierarchySettings.ACGradeSetting" Collapsed="true">
+    <Position X="4.75" Y="4.5" Width="1.5" />
+    <AssociationLine Name="m_rGradeModel" Type="LogisticPlatformMVP.Prototype.Subsystems.HierarchyGrades.IGradeSubsystem">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.085" Y="0.098" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>gAAQAAAAAAAAgAAAAAgABAAAAACiAAAAAAAIABAEAAA=</HashCode>
+      <FileName>Prototype\Subsystems\HierarchySettings\ACGradeSetting.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_rGradeModel" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LogisticPlatformMVP.Prototype.Subsystems.HierarchyGrades.ACGradeModel" Collapsed="true">
+    <Position X="12.5" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Prototype\Subsystems\HierarchyGrades\ACGradeModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LogisticPlatformMVP.Prototype.Subsystems.Assignement.ACAssignement">
+    <Position X="12.25" Y="6.5" Width="2.25" />
+    <AssociationLine Name="m_rOptimizator" Type="LogisticPlatformMVP.Prototype.Subsystems.Optimizator.IOptimizatorSubsystem" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.25" Y="6.875" />
+        <Point X="10.75" Y="6.875" />
+        <Point X="10.75" Y="7.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Prototype\Subsystems\Assignement\ACAssignement.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_rOptimizator" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LogisticPlatformMVP.Prototype.DataModel.Hierarchy.GoalModel.CStandartModel" Collapsed="true">
+    <Position X="12.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Prototype\DataModel\Hierarchy\GoalModel\CStandartModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="LogisticPlatformMVP.Prototype.Adapters.OrderManager.IOrderManager">
+    <Position X="12" Y="3.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Prototype\Adapters\OrderManager\IOrderManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LogisticPlatformMVP.Prototype.Subsystems.Assignement.IAssignementSubsystem">
+    <Position X="10.5" Y="5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Prototype\Subsystems\Assignement\IAssignementSubsystem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LogisticPlatformMVP.Prototype.Subsystems.HierarchyGrades.IGradeSubsystem">
+    <Position X="6.25" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Prototype\Subsystems\HierarchyGrades\IGradeSubsystem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LogisticPlatformMVP.Prototype.Subsystems.HierarchySettings.IGradeSettingSubsystem">
+    <Position X="0.5" Y="0.5" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>gAAQAAAAAAAAgAAAAAAABAAAAACiAAAAAAAIABAEAAA=</HashCode>
+      <FileName>Prototype\Subsystems\HierarchySettings\IGradeSettingSubsystem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LogisticPlatformMVP.Prototype.Subsystems.Operating.IOperatingSubsystem">
+    <Position X="9.5" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAEAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Prototype\Subsystems\Operating\IOperatingSubsystem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LogisticPlatformMVP.Prototype.Subsystems.Optimizator.IOptimizatorSubsystem">
+    <Position X="9.25" Y="7.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Prototype\Subsystems\Optimizator\IOptimizatorSubsystem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LogisticPlatformMVP.Prototype.ILogisticPlatform" Collapsed="true">
+    <Position X="2.5" Y="4.25" Width="1.5" />
+    <InheritanceLine Type="LogisticPlatformMVP.Prototype.Subsystems.HierarchySettings.IGradeSettingSubsystem" FixedToPoint="true">
+      <Path>
+        <Point X="3.125" Y="3.786" />
+        <Point X="3.125" Y="4.01" />
+        <Point X="3.25" Y="4.01" />
+        <Point X="3.25" Y="4.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Prototype\ILogisticPlatform.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LogisticPlatformMVP.Prototype.Adapters.WebMap.IWebMap">
+    <Position X="4.75" Y="6.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Prototype\Adapters\WebMap\IWebMap.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LogisticPlatformMVP.Prototype.DataModel.Hierarchy.GoalModel.IGoalModel" Collapsed="true">
+    <Position X="10.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Prototype\DataModel\Hierarchy\GoalModel\IGoalModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

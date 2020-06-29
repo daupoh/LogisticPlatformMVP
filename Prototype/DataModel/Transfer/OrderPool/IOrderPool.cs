@@ -16,13 +16,16 @@ namespace LogisticPlatformMVP.Prototype.DataModel.Transfer.OrderPool
         int OrdersCount { get; }
         int CouriersCount { get; }
 
-
         ICourier GetCourierByNumber(int iNumber);
         IOrder GetOrderByNumber(int iNumber);
+        void DeleteCourierByNumber(int iNumber);
+        void DeleteOrderByNumber(int iNumber);
 
         void AddOrder(IOrder rOrder);
         void AddCourier(ICourier rCourier);
-        
+
+        void ClearOrders();
+        void ClearCouriers();
 
     }
 }

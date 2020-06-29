@@ -91,11 +91,15 @@
     <Compile Include="MVP\TCCrossbreed.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Prototype\Adapters\OrderManager\IOrderManagerAdapter.cs" />
+    <Compile Include="Prototype\Adapters\OrderManager\IOrderManager.cs" />
+    <Compile Include="Prototype\Adapters\WebMap\IWebMap.cs" />
+    <Compile Include="Prototype\CPrototypeLogisticPlatform.cs" />
+    <Compile Include="Prototype\DataModel\Hierarchy\Border\IBorder.cs" />
     <Compile Include="Prototype\DataModel\Hierarchy\Criterion\ICriterion.cs" />
+    <Compile Include="Prototype\DataModel\Hierarchy\GoalModel\CStandartModel.cs" />
     <Compile Include="Prototype\DataModel\Hierarchy\GoalModel\IGoalModel.cs" />
     <Compile Include="Prototype\DataModel\Hierarchy\PairComprassionMatrix\IPairComprassionMatrix.cs" />
-    <Compile Include="Prototype\DataModel\Hierarchy\Scales\IScales.cs" />
+    <Compile Include="Prototype\DataModel\Hierarchy\Scales\SCModelScales.cs" />
     <Compile Include="Prototype\DataModel\Hierarchy\Standart\IStandart.cs" />
     <Compile Include="Prototype\DataModel\Map\GraphArc\IGraphArc.cs" />
     <Compile Include="Prototype\DataModel\Map\GraphPath\IGraphPath.cs" />
@@ -104,7 +108,17 @@
     <Compile Include="Prototype\DataModel\Transfer\IEntity.cs" />
     <Compile Include="Prototype\DataModel\Transfer\OrderPool\IOrderPool.cs" />
     <Compile Include="Prototype\DataModel\Transfer\Order\IOrder.cs" />
-    <Compile Include="Prototype\Subsystems\Operating\IOperating.cs" />
+    <Compile Include="Prototype\ILogisticPlatform.cs" />
+    <Compile Include="Prototype\Subsystems\Assignement\ACAssignement.cs" />
+    <Compile Include="Prototype\Subsystems\Assignement\IAssignementSubsystem.cs" />
+    <Compile Include="Prototype\Subsystems\HierarchyGrades\ACGradeModel.cs" />
+    <Compile Include="Prototype\Subsystems\HierarchyGrades\IGradeSubsystem.cs" />
+    <Compile Include="Prototype\Subsystems\HierarchySettings\ACGradeSetting.cs" />
+    <Compile Include="Prototype\Subsystems\HierarchySettings\IGradeSettingSubsystem.cs" />
+    <Compile Include="Prototype\Subsystems\Operating\ACOperating.cs" />
+    <Compile Include="Prototype\Subsystems\Operating\IOperatingSubsystem.cs" />
+    <Compile Include="Prototype\Subsystems\Optimizator\ACOptimizator.cs" />
+    <Compile Include="Prototype\Subsystems\Optimizator\IOptimizatorSubsystem.cs" />
     <Compile Include="Prototype\Tests\TCRoutesRace.cs" />
     <EmbeddedResource Include="FmWaitingTime.resx">
       <DependentUpon>FmWaitingTime.cs</DependentUpon>
@@ -127,6 +141,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -142,15 +157,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Prototype\Adapters\WebMap\" />
     <Folder Include="Prototype\Algorithms\AntColony\AntRun\" />
     <Folder Include="Prototype\Algorithms\AntColony\Ant\" />
     <Folder Include="Prototype\Algorithms\Genetic\Chromosome\" />
     <Folder Include="Prototype\Algorithms\Genetic\Evolution\" />
-    <Folder Include="Prototype\Subsystems\Assignement\" />
-    <Folder Include="Prototype\Subsystems\HierarchyGrades\" />
-    <Folder Include="Prototype\Subsystems\HierarchySettings\" />
-    <Folder Include="Prototype\Subsystems\Searching\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

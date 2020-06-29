@@ -12,7 +12,7 @@ namespace LogisticPlatformMVP.Prototype.DataModel.Map.GraphArc
         int FirstOrderNumber { get; }
         int SecondOrderNumber { get; }
 
-        double StraightTimePath { get; }
-        double BackPathTime { get; }
+        double StraightTimePath { get; set; }
+        double BackPathTime { get; set; }
     }
 }
